@@ -11,6 +11,21 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+
+
+
+
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map((tuto) => {
+    const words = tuto.split(" ");
+    const cappedWords = words.map(
+      (words) => words.charAt(0).toUpperCase() + words.slice(1)
+    );
+    const response = cappedWords.join(" ");
+    return response;
+  });
+};
+
+// mapping goes through every element of an array
+// The split() method divides a String into an ordered list of substrings
+// The join() method creates and returns a new string by concatenating all of the elements in an array
